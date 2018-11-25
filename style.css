@@ -117,13 +117,13 @@ strong:hover {
  body {
 	 max-width: 600px;
 }
-.gridowiec {
+ .gridowiec {
 	 display: grid;
 	 grid-template-columns: 100%;
 	 grid-template-rows: 2fr 1fr 1fr 1fr;
+	 max-width: auto; 
  }
  .header {
-	 width: 100%;
- }
-
+	 max-width: auto;
+	}
 }
