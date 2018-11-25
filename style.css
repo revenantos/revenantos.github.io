@@ -1,3 +1,7 @@
+html {
+
+}
+
 
 body {
 	background-image: radial-gradient(darkblue, black);
@@ -50,8 +54,8 @@ a:hover {
 	grid-template-rows: 2fr 2fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: 'wstep wstep'
-			     'przyk1 przyk2'
-			     'zakonczenie zakonczenie';
+						 'przyk1 przyk2'
+						 'zakonczenie zakonczenie';
 	width: 1000px;
 	height: 1500px;
 	padding-top: 90px;
@@ -59,6 +63,10 @@ a:hover {
 	border: 4px outset brown;	
 }
 
+ .wszy {
+	 width: 100%;
+ }
+ 
 .a {
 	text-align: center;
 	font-family: Merriweather, Serif;
@@ -88,6 +96,7 @@ a:hover {
 	background-image: linear-gradient(to bottom right, hsl(0, 92%, 70%), hsl(27, 92%, 70%), hsl(45, 92%, 70%));
 	align-items: center;
 	padding-top: 30%;
+	box-sizing: border-box;
 }
 
 .przyk2 p {
@@ -114,16 +123,14 @@ strong:hover {
 }
 
 @media (max-width: 600px) {
- body {
-	 max-width: auto;
-}
  .gridowiec {
 	 display: grid;
-	 grid-template-columns: 100%;
+	 grid-template-columns: 1fr;
 	 grid-template-rows: 2fr 1fr 1fr 1fr;
 	 max-width: auto; 
  }
  .header {
 	 max-width: auto;
-	}
+ }
+
 }
