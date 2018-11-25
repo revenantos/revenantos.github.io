@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>first website</title>
+  <title>First website</title>
   <link href="style.css" type="text/css" rel="stylesheet">
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
 </head>
 <body>
-  <h1>Nagłówek</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, 
-  scelerisque sed, 
-  lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. 
-  Phasellus pharetra nulla ac diam. Quisque semper justo at risus. 
-  Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, 
-  sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, 
-  vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. 
-  Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. 
-  Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, 
-  urna quam viverra nisi, in interdum massa nibh nec erat.</p>
-
-
+  <div class="header">
+  <ul>
+    <li><a class="g" href="#p1">Wstęp</a><li>
+	<li><a class="g" href="#p2">Przykład samego HTML</a></li>
+	<li><a class="g" href="#p3">Przykład HTML+CSS</a></li>
+	<li><a class="g" href="#zak">Zakończenie</a></li>
+  </ul>
+  </div>
+  <div class="gridowiec">
+  <div class="wstep a">
+    <h1 id="p1">Wstęp</h1>
+    <p>Niniejsza stronka została zrobiona jedynie w celach treningowych. 
+    ze względu na brak pomysłu na treść, zostanie ona wymyślona na poczekaniu. 
+    Wymyślony w ten sposób wywód będzie miał za zadanie przedstawienie dwóch 
+    elementów biorących udział w tworzeniu stron internetowych: HTML i CSS.
+    poniżej zawarte zostaną przykłady tekstu: jeden zawierający samo HTML,
+    oraz drugi, mający za zadanie pokazać jedynie niewielką część możliwości CSS, 
+    które posłuży do stylizowania elementów HTML. W założeniu strona widoczna na 
+    ekranie komputera bądź laptopa powinna pokazać element "Wstęp" w jednej komórce, 
+    następnie elementy "Przykład samego HTML" oraz "Przykład HTML+CSS, a pod nimi
+    ostatni element "Zakończenie". Strona otwarta na ekranie telefonu powinna wyświetlać
+    wszystkie 3 elementy po kolei. Pasek nawigacyjny znajdujący się u góry strony powinien
+    poruszać się wraz z przewijaniem tekstu, co prawdopodobnie będzie widoczne jedynie na telefonie.</p>
+  </div>
+  
+  <div class="przyk1 b">
+    <h1 id="p2">Przykład samego HTML</h1>
+	<h2>Przykład tekstu pisanego w samym HTML Obejmuje on również oba napisane nagłówki.</h2>
+	<p>Tekst pozostawiony w samym HTML jest nacechowany szeregiem ustawień domyślnych:
+	jest przesunięty w lewo, ma określoną czcionkę zależną od użytego nagłówku itp.
+	jak widać na obecnym przykładzie nie jest to zbyt atrakcyjna forma tekstu.</p>
+  </div>
+  
+  <div class="przyk2 a">
+    <h1 id="p3">Przykład HTML+CSS</h1>
+	<h2>Przykład obejmuje tekst HTML który poddano stylizacji za pomocą CSS.</h2>
+	<p>Tekst wraz z nagłówkami i tłem został celowo <strong>nieco przejaskrawiony</strong>
+	jednak na potrzeby prezentacji było to niejako nieuniknione.</p>
+  </div>
+  <div class="zakonczenie a">
+    <h1 id="zak">Zakończenie</h1>
+    <footer>Tekst na samym dole strony domyślnie można wyświetlić jako footer, jest on czymś w rodzaju przypisu do strony.</footer>
+	<p>Wróć do górnej części strony klikając<a href="#"> TUTAJ</a></p>
+  </div>
+  </div>
 </body>
 </html>
