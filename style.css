@@ -129,8 +129,4 @@ strong:hover {
 	 grid-template-rows: 2fr 1fr 1fr 1fr;
 	 max-width: auto; 
  }
- .header {
-	 max-width: auto;
- }
-
 }
