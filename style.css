@@ -1,9 +1,130 @@
-p {
- color: red
+html {
+
 }
 
-h1 {
- color: blue
- font-size: 20vm;
- border: 1px solid red;
+
+body {
+	background-image: radial-gradient(darkblue, black);
+	margin: 0;
+}	
+
+
+.header {
+	position: fixed;
+	background-image: radial-gradient(rgb(230, 234, 154), rgb(228, 222, 14), green);
+	width: 100%;
+	
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	z-index: 3;
+}
+
+ul, li {
+	display: inline-block;
+	height: 20px;
+	box-sizing: border-box;
+}
+
+.g {
+	border: 1px solid red;
+	box-shadow: 5px 5px 3px gray;
+	border-radius: 10px;
+	padding: 6px;
+	margin: 0 30px 10px 5px;
+	background-color: red;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 3px black;
+	
+}
+
+a:hover {
+	padding: 10px;
+	font-size: 30px;
+}
+
+
+.gridowiec {
+	background-color: lightgray;
+	display: grid;
+	grid-template-rows: 2fr 2fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'wstep wstep'
+						 'przyk1 przyk2'
+						 'zakonczenie zakonczenie';
+	width: 1000px;
+	height: 1500px;
+	padding-top: 90px;
+	margin: 0 0 20% 20%;
+	border: 4px outset brown;	
+}
+
+.a {
+	text-align: center;
+	font-family: Merriweather, Serif;
+	line-height: 1.3;
+}
+
+.a h1 {
+	font-family: "Bubblegum Sans", Serif;
+}
+
+.b {
+    background-color: white;
+}	
+
+.wstep {
+	grid-area: wstep;
+}
+
+.przyk1 {
+	grid-area: przyk1;
+}
+
+.przyk2 {
+	grid-area: przyk2;
+	border: 7px outset purple;
+	border-radius: 20px;
+	background-image: linear-gradient(to bottom right, hsl(0, 92%, 70%), hsl(27, 92%, 70%), hsl(45, 92%, 70%));
+	align-items: center;
+	padding-top: 30%;
+}
+
+.przyk2 p {
+	font-style: italic;
+}
+
+.przyk2 strong {
+	font-weight: bold;
+	color: red;
+	background-color: rgba(21, 110, 240, 0.7);
+	
+}
+.przyk2 h1 {
+	text-shadow: 2px 2px 6px violet;
+}
+
+strong:hover {
+	background-color: rgba(21, 110, 240, 0.3);
+	color: darkred;
+}
+
+.zakonczenie {
+	grid-area: zakonczenie;
+}
+
+@media screen and (max-width: 600px) {
+ .gridowiec {
+	 display: grid;
+	 grid-template-columns: 100%;
+	 width: 100%; 
+ }
+ .header {
+	 width: 100%;
+ }
+
 }
