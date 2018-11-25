@@ -114,10 +114,14 @@ strong:hover {
 }
 
 @media screen and (max-width: 600px) {
- .gridowiec {
+ body {
+	 max-width: 600px;
+}
+	
+.gridowiec {
 	 display: grid;
 	 grid-template-columns: 100%;
-	 width: 100%; 
+	 max-width: 600px; 
  }
  .header {
 	 width: 100%;
