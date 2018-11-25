@@ -113,7 +113,7 @@ strong:hover {
 	grid-area: zakonczenie;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
  body {
 	 max-width: 600px;
 }
@@ -121,7 +121,6 @@ strong:hover {
 	 display: grid;
 	 grid-template-columns: 100%;
 	 grid-template-rows: 2fr 1fr 1fr 1fr;
-	 max-width: 600px; 
  }
  .header {
 	 width: 100%;
