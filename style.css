@@ -115,7 +115,7 @@ strong:hover {
 
 @media (max-width: 600px) {
  body {
-	 max-width: 600px;
+	 max-width: auto;
 }
  .gridowiec {
 	 display: grid;
