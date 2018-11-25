@@ -116,7 +116,7 @@ strong:hover {
 @media screen and (max-width: 600px) {
  body {
 	 max-width: 600px;
-	
+}
 .gridowiec {
 	 display: grid;
 	 grid-template-columns: 100%;
