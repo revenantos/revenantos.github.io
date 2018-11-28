@@ -133,7 +133,7 @@ strong:hover {
 	grid-area: zakonczenie;
 }
 
-@media (max-width: 200px) {
+@media screen and (max-width: 320px) {
  .gridowiec {
 	 display: grid;
 	 grid-template-columns: 1fr;
