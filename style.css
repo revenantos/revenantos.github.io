@@ -28,7 +28,7 @@ li {
 li a {
 	display: block;
 	border: 1px solid lightgreen;
-	box-shadow: 5px 5px 3px lightgreen;
+	box-shadow: 5px 5px 3px green;
 	border-radius: 1vw;
 	padding: 0.5vw;
 	margin: 0 1.3vw 3vw 0.5vw;
