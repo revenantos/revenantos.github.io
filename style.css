@@ -135,7 +135,7 @@ strong:hover {
 
 @media screen and (max-width: 320px) {
  .gridowiec {
-	 display: flex;
+	 float: left;
 	 width: 100%;
  }
 }
