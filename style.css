@@ -12,6 +12,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	font-size: 20px;
 }
 	
 a {
@@ -33,24 +34,32 @@ ul li {
 	float: left;
 	display: inline-block;
 	padding: 15px;
-	border: 1px solid red;
 	color: white;
 	text-align: center;
+	border-right: 2px solid red;
 }
 
 #bazinga {
 	padding: 15px;
-	border: 1px solid red;
 	z-index: 1;
 	position: absolute;
 }
 
 .av {
+	border-bottom: 3px solid red;
 	display: none;
 	text-align: center;
 	color: white;
 	background-color: #000;
 	min-width: 150px;
+}
+
+a:hover {
+	text-shadow: 1px 1px 0 hsl(121, 100%, 23%), 0 0 5px hsl(121, 100%, 56%);
+}
+
+li:hover {
+	background-color: #333;
 }
 
 #cases:hover .av {
