@@ -5,36 +5,56 @@ body {
 	margin: 0;
 }	
 
-
-ul {
-	position: fixed;
-	width: 100%;
-	list-type-style: none;
+.navbar {
 	margin: 0;
-	padding: 0;
-	background-color: #222;
-	height: 3.5vw;
-	text-align: center;
-	font-size: 1.4vw;
-	font-weight: bold;
+	background-color: #000;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
-
-li {
-	display: inline-block;
-	height: 20px;
-	box-sizing: border-box;
-}
-
-li a {
-	display: block;
-	border: 1px solid lightgreen;
-	box-shadow: 5px 5px 3px green;
-	border-radius: 1vw;
-	padding: 0.5vw;
-	margin: 0 1.3vw 3vw 0.5vw;
+	
+a {
 	text-decoration: none;
 	color: white;
-	text-shadow: 1px 1px 3px black;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+}
+
+ul li ul {
+	position: absolute;
+}
+
+ul li {
+	float: left;
+	display: inline-block;
+	padding: 15px;
+	border: 1px solid red;
+	color: white;
+	text-align: center;
+}
+
+#bazinga {
+	padding: 15px;
+	border: 1px solid red;
+	z-index: 1;
+	position: absolute;
+}
+
+.av {
+	display: none;
+	text-align: center;
+	color: white;
+	background-color: #000;
+	min-width: 150px;
+}
+
+#cases:hover .av {
+	display: block;
 }
 
 .tutaj {
@@ -52,12 +72,6 @@ li a {
 	padding: 3px;
 	font-size: 1.2em;
 }
-
-li a:hover {
-	text-shadow: 2px 2px 4px lightgreen;
-	background-color: black;
-}
-
 
 .gridowiec {
 	background-color: lightgray;
@@ -133,9 +147,10 @@ strong:hover {
 	grid-area: zakonczenie;
 }
 
-@media screen and (max-width: 320px) {
- .gridowiec, .wszy {
+@media only screen and (max-width: 300px) {
+ .gridowiec {
 	 float: left;
-	 width: 100%;
+	 width: 100% 
  }
+
 }
