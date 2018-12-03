@@ -158,7 +158,7 @@ strong:hover {
 
 @media only screen and (max-width: 300px) {
  .gridowiec, .nabvar {
-	 display: flexbox;
+	 display: flex;
  }
  .przyk1, .przyk2, .przyk3, .zakonczenie {
 	 float: left;
