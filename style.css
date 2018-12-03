@@ -157,9 +157,11 @@ strong:hover {
 }
 
 @media only screen and (max-width: 300px) {
- .gridowiec {
-	 float: left;
-	 width: 100% 
+ .gridowiec, .nabvar {
+	 display: flexbox;
  }
-
+ .przyk1, .przyk2, .przyk3, .zakonczenie {
+	 float: left;
+	 width: 100%;
+}
 }
