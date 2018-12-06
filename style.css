@@ -161,11 +161,11 @@ strong:hover {
 }
 
 #change {
-	width: 250px;
 	position: absolute;
-	top: 130px;
-	left: 20px;
 	text-align: center;
+	width: 350px;
+	top: -10px;
+	right: 40%;
 }
 
 #buttonLight {
@@ -175,6 +175,7 @@ strong:hover {
 	border: 2px solid yellow;
 	border-radius: 10px;
 	background-color: hsl(60, 62%, 92%);
+	z-index: 0;
 }
 #buttonLight:hover {
 	box-shadow: 5px 5px 5px yellow;
