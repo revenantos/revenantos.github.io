@@ -8,20 +8,20 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
 </head>
-<body>
-  <div class="navbar">
+<body id="bodybody">
+  <div id="navbar">
     <ul>
 	  <li><a href="#">Home</a></li>
 	  <li><a href="#">News</a></li>
 	  <li><a href="#">About us</a></li>
 	  <li id="cases"><a href="#">Cases</a>
 	    <div id="bazinga">
-		<ul> 
-	      <li class="av"><a href="#">Case 1</a></li>
-		  <li class="av"><a href="#">Case 2</a></li>
-		  <li class="av"><a href="#">Case 3</a></li>
-		  <li class="av"><a href="#">Case 4</a></li>
-		  <li class="av"><a href="#">Case 5</a></li>
+		<ul id="rozsuwacz"> 
+	      <a class="av" href="#">Case 1</a>
+		  <a class="av" href="#">Case 2</a>
+		  <a class="av" href="#">Case 3</a>
+		  <a class="av" href="#">Case 4</a>
+		  <a class="av" href="#">Case 5</a>
 		</ul>
 		</div>
 	  </li>
@@ -44,7 +44,6 @@
     wszystkie 3 elementy po kolei. Pasek nawigacyjny znajdujący się u góry strony powinien
     poruszać się wraz z przewijaniem tekstu, co prawdopodobnie będzie widoczne jedynie na telefonie.</p>
   </div>
-  
   <div class="przyk1 b wszy">
     <h1 id="p2">Przykład samego HTML</h1>
 	<h2>Przykład tekstu pisanego w samym HTML Obejmuje on również oba napisane nagłówki.</h2>
@@ -65,5 +64,28 @@
 	<p>Wróć do górnej części strony klikając<a class="tutaj" href="#"> TUTAJ</a></p>
   </div>
   </div>
+   <div id="change">
+	<p id="buttonLight" onclick="buttonLight()">I wan't to see things more clearly!</p>
+	<p id="buttonDark" onclick="buttonDark()">I'd prefer a calm darkness.</p>
+  </div>
+  <script>
+  function buttonLight() {
+    document.getElementById("rozsuwacz").style.backgroundColor='hsl(55, 100%, 95%)';
+    document.getElementById("navbar").style.color='black';
+	document.getElementById("navbar").style.backgroundColor='hsl(55, 100%, 95%)';
+	document.getElementById("bodybody").style.backgroundImage='url(https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)';
+	document.getElementById("buttonDark").style.display='block';
+	document.getElementById("buttonLight").style.display='none';
+}
+
+function buttonDark() {
+	document.getElementById("rozsuwacz").style.backgroundColor='black';
+    document.getElementById("navbar").style.color='white';
+	document.getElementById("navbar").style.backgroundColor='black';
+	document.getElementById("bodybody").style.backgroundImage='url(https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)';
+	document.getElementById("buttonLight").style.display='block';
+	document.getElementById("buttonDark").style.display='none';
+}
+</script>
 </body>
 </html>
