@@ -5,7 +5,8 @@ body {
 	margin: 0;
 }	
 
-.navbar {
+
+#navbar {
 	margin: 0;
 	background-color: #000;
 	color: white;
@@ -17,7 +18,7 @@ body {
 	
 a {
 	text-decoration: none;
-	color: white;
+	color: inherit;
 }
 
 ul {
@@ -34,7 +35,6 @@ ul li {
 	float: left;
 	display: inline-block;
 	padding: 15px;
-	color: white;
 	text-align: center;
 	border-right: 2px solid red;
 }
@@ -43,23 +43,27 @@ ul li {
 	padding: 15px;
 	z-index: 1;
 	position: absolute;
+	left: 245px;
+}
+
+#rozsuwacz {
+	background-color: black;
 }
 
 .av {
 	border-bottom: 3px solid red;
 	display: none;
 	text-align: center;
-	color: white;
-	background-color: #000;
 	min-width: 150px;
+	padding: 12px 16px;
 }
 
 a:hover {
 	text-shadow: 1px 1px 0 hsl(121, 100%, 23%), 0 0 5px hsl(121, 100%, 56%);
 }
 
-li:hover {
-	background-color: #333;
+li:hover, .av:hover {
+	background-color: #999;
 }
 
 #cases:hover .av {
@@ -156,9 +160,44 @@ strong:hover {
 	grid-area: zakonczenie;
 }
 
+#change {
+	width: 250px;
+	position: absolute;
+	top: 130px;
+	left: 20px;
+	text-align: center;
+}
+
+#buttonLight {
+	display: block;
+	color: black;
+	padding: 3px;
+	border: 2px solid yellow;
+	border-radius: 10px;
+	background-color: hsl(60, 62%, 92%);
+}
+#buttonLight:hover {
+	box-shadow: 5px 5px 5px yellow;
+	cursor: pointer;
+}
+
+#buttonDark {
+	display: none;
+	color: white;
+	padding: 3px;
+	border: 2px solid gray;
+	border-radius: 10px;
+	background-color: hsl(60, 62%, 10%);
+}
+
+#buttonDark:hover {
+	box-shadow: 5px 5px 5px gray;
+	cursor: pointer;
+}
+
 @media only screen and (max-width: 300px) {
- .gridowiec, .nabvar {
-	 display: flex;
+ .gridowiec {
+	 display: flexbox;
  }
  .przyk1, .przyk2, .przyk3, .zakonczenie {
 	 float: left;
