@@ -1,3 +1,33 @@
+#firstLe, #secLe, #thirdLe, #fourthLe, #fifthLe, #sixthLe, #sevLe, #eighLe {
+	display: inline-block;
+	color: white;
+	width: 17px;
+	padding: 3px;
+	margin-left: 3px;
+	text-align: center;
+	letter-spacing: 5px;
+	border: 1px solid green;
+	background-color: white;
+}
+
+#gameHangman {
+    grid-area: gameHangman;
+    width: 60%;
+	margin-left: 20%;
+	background-image: repeating-linear-gradient(to bottom right, #d4fcfe, #84fcfe, #84d5f6);
+	border: 5px outline lightblue;
+	border-radius: 25px;
+}
+
+#hangman {
+	border: 3px solid lightblue;
+	border-radius: 20px;
+}
+
+#innerGame {
+	margin-left:;
+	text-align: center;
+}
 
 body {
 	background: url("https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260") no-repeat fixed center;
@@ -89,13 +119,14 @@ li:hover, .av:hover {
 .gridowiec {
 	background-color: lightgray;
 	display: grid;
-	grid-template-rows: 2fr 2fr 1fr;
+	grid-template-rows: 2fr 2fr 2fr 1fr;
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'wstep wstep'
+	grid-template-areas: 'gameHangman gameHangman'
+	                     'wstep wstep'
 						 'przyk1 przyk2'
 						 'zakonczenie zakonczenie';
 	width: 1000px;
-	height: 1200px;
+	height: 1600px;
 	padding-top: 3.5vw;
 	margin: 0 0 20% 20%;
 	border: 4px outset brown;	
