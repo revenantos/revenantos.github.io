@@ -185,7 +185,7 @@ function needUserInput() {
 	       document.getElementById("hangman").src = "hangmanImages/wisielec5.png";
 		 break;
 	     default:
-		   document.getElementById("hangman").src = "wisielec6.png";
+		   document.getElementById("hangman").src = "hangmanImages/wisielec6.png";
 		   document.getElementById("warn").innerHTML = "You have lost the game!";
 		}	 
 		
