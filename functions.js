@@ -173,19 +173,19 @@ function needUserInput() {
 	   document.getElementById("warn").innerHTML = "Wrong choice!"; 	 
 	   switch (numOfTriesMaker()) {
 	     case 1:
-	       document.getElementById("hangman").src = "wisielec2.png";
+	       document.getElementById("hangman").src = "/Nowy folder/wisielec2.png";
 		 break;
 	     case 2:
-	       document.getElementById("hangman").src = "wisielec3.png";
+	       document.getElementById("hangman").src = "/Nowy folder/wisielec3.png";
 		 break;
 	     case 3:
-	       document.getElementById("hangman").src = "wisielec4.png";
+	       document.getElementById("hangman").src = "/Nowy folder/wisielec4.png";
 		 break;
 	     case 4:
-	       document.getElementById("hangman").src = "wisielec5.png";
+	       document.getElementById("hangman").src = "/Nowy folder/wisielec5.png";
 		 break;
 	     default:
-		   document.getElementById("hangman").src = "wisielec6.png";
+		   document.getElementById("hangman").src = "/Nowy folder/wisielec6.png";
 		   document.getElementById("warn").innerHTML = "You have lost the game!";
 		}	 
 		
