@@ -16,106 +16,129 @@ function buttonDark() {
 	document.getElementById("buttonDark").style.display='none';
 }
 
-var riddle1, riddle2, riddle3, riddle4, randomRiddle, firstLetter, secondLetter, thirdLetter, fourthLetter, fifthLetter, sixthLetter, seventhLetter, eightLetter;
-var riddles = {
-	riddle1: {
-	firstLetter:"C", 
-	secondLetter:"I", 
-	thirdLetter:"V", 
-	fourthLetter:"I", 
-	fifthLetter:"L", 
-	sixthLetter:"I", 
-	seventhLetter:"A", 
-	eightLetter:"N",
-	fullRiddle1: function() {
-		return this.firstLetter + this.secondLetter + this.thirdLetter + this.fourthLetter + this.fifthLetter + this.sixthLetter + this.seventhLetter + this.eightLetter;
-		}
-    },
-  
-	riddle2: {
-	firstLetter:"M", 
-	secondLetter:"I", 
-	thirdLetter:"D", 
-	fourthLetter:"N", 
-	fifthLetter:"I", 
-	sixthLetter:"G", 
-	seventhLetter:"H", 
-	eightLetter:"T",
-	fullRiddle2: function() {
-		return this.firstLetter + this.secondLetter + this.thirdLetter + this.fourthLetter + this.fifthLetter + this.sixthLetter + this.seventhLetter + this.eightLetter;
-		}
-	},
-	
-	riddle3: {
-	firstLetter:"W", 
-	secondLetter:"I", 
-	thirdLetter:"L", 
-	fourthLetter:"D", 
-	fifthLetter:"L", 
-	sixthLetter:"I", 
-	seventhLetter:"F", 
-	eightLetter:"E",
-	fullRiddle3: function() {
-		return this.firstLetter + this.secondLetter + this.thirdLetter + this.fourthLetter + this.fifthLetter + this.sixthLetter + this.seventhLetter + this.eightLetter;
-		}
-	},
-	
-	riddle4: {
-	firstLetter:"S", 
-	secondLetter:"H", 
-	thirdLetter:"O", 
-	fourthLetter:"U", 
-	fifthLetter:"L", 
-	sixthLetter:"D", 
-	seventhLetter:"E", 
-	eightLetter:"R",
-	fullRiddle4: function() {
-		return this.firstLetter + this.secondLetter + this.thirdLetter + this.fourthLetter + this.fifthLetter + this.sixthLetter + this.seventhLetter +  this.eightLetter;}
-	}
-}; 
-	var docE1a1, docEla2, docEla3, docEla4, docEla5, docEla6, docEla7, docEla8;
-	var docElb1, docElb2, docElb3, docElb4, docElb5, docElb6, docElb7, docElb8;
-	var docElc1, docElc2, docElc3, docElc4, docElc5, docElc6, docElc7, docElc8;
-	var docEld1, docEld2, docEld3, docEld4, docEld5, docEld6, docEld7, docEld8;
-	var randomRiddle = Math.floor(Math.random() * 4);
+var riddle1 = "CIVILIAN";
+var riddle2 = "MIDNIGHT";
+var riddle3 = "WILDLIFE";
+var riddle4 = "SHOULDER";
+var riddle5 = "ADDITION";
+var riddle6 = "CHAMPION";
+var riddle7 = "EVIDENCE";
+var riddle8 = "WOODLAND";
+var riddle9 = "VOLATILE";
+var riddle10 = "STRUGGLE";
+
+var x1 = document.getElementById("firstLe");
+var x2 = document.getElementById("secLe");
+var x3 = document.getElementById("thirdLe");
+var x4 = document.getElementById("fourthLe");
+var x5 = document.getElementById("fifthLe");
+var x6 = document.getElementById("sixthLe");
+var x7 = document.getElementById("sevLe");
+var x8 = document.getElementById("eighLe");
+
+var hint = document.getElementById("hint");
+    
+	var randomRiddle = Math.floor(Math.random() * 10); 
 	 if (randomRiddle == 0) {
-	   document.getElementById("firstLe").innerHTML = riddles.riddle1.firstLetter;
-	   document.getElementById("secLe").innerHTML = riddles.riddle1.secondLetter;
-	   document.getElementById("thirdLe").innerHTML = riddles.riddle1.thirdLetter;
-	   document.getElementById("fourthLe").innerHTML = riddles.riddle1.fourthLetter;
-	   document.getElementById("fifthLe").innerHTML = riddles.riddle1.fifthLetter;
-	   document.getElementById("sixthLe").innerHTML = riddles.riddle1.sixthLetter;
-	   document.getElementById("sevLe").innerHTML = riddles.riddle1.seventhLetter;
-	   document.getElementById("eighLe").innerHTML = riddles.riddle1.eightLetter;
-	   
-	   
+	   var answer = riddle1;
+	   x1.innerHTML = riddle1.charAt(0);
+	   x2.innerHTML = riddle1.charAt(1);
+	   x3.innerHTML = riddle1.charAt(2);
+	   x4.innerHTML = riddle1.charAt(3);
+	   x5.innerHTML = riddle1.charAt(4);
+	   x6.innerHTML = riddle1.charAt(5);
+	   x7.innerHTML = riddle1.charAt(6);
+	   x8.innerHTML = riddle1.charAt(7);   
 	} else if (randomRiddle == 1) {
-	   document.getElementById("firstLe").innerHTML = riddles.riddle2.firstLetter;
-	   document.getElementById("secLe").innerHTML = riddles.riddle2.secondLetter;
-	   document.getElementById("thirdLe").innerHTML = riddles.riddle2.thirdLetter;
-	   document.getElementById("fourthLe").innerHTML = riddles.riddle2.fourthLetter;
-	   document.getElementById("fifthLe").innerHTML = riddles.riddle2.fifthLetter;
-	   document.getElementById("sixthLe").innerHTML = riddles.riddle2.sixthLetter;
-	   document.getElementById("sevLe").innerHTML = riddles.riddle2.seventhLetter;
-	   document.getElementById("eighLe").innerHTML = riddles.riddle2.eightLetter;
+	   var answer = riddle2;
+	   x1.innerHTML = riddle2.charAt(0);
+	   x2.innerHTML = riddle2.charAt(1);
+	   x3.innerHTML = riddle2.charAt(2);
+	   x4.innerHTML = riddle2.charAt(3);
+	   x5.innerHTML = riddle2.charAt(4);
+	   x6.innerHTML = riddle2.charAt(5);
+	   x7.innerHTML = riddle2.charAt(6);
+	   x8.innerHTML = riddle2.charAt(7); 
 	} else if (randomRiddle == 2) {
-	   document.getElementById("firstLe").innerHTML = riddles.riddle3.firstLetter;
-	   document.getElementById("secLe").innerHTML = riddles.riddle3.secondLetter;
-	   document.getElementById("thirdLe").innerHTML = riddles.riddle3.thirdLetter;
-	   document.getElementById("fourthLe").innerHTML = riddles.riddle3.fourthLetter;
-	   document.getElementById("fifthLe").innerHTML = riddles.riddle3.fifthLetter;
-	   document.getElementById("sixthLe").innerHTML = riddles.riddle3.sixthLetter;
-	   document.getElementById("sevLe").innerHTML = riddles.riddle3.seventhLetter;
-	   document.getElementById("eighLe").innerHTML = riddles.riddle3.eightLetter;
+	   var answer = riddle3;
+	   x1.innerHTML = riddle3.charAt(0);
+	   x2.innerHTML = riddle3.charAt(1);
+	   x3.innerHTML = riddle3.charAt(2);
+	   x4.innerHTML = riddle3.charAt(3);
+	   x5.innerHTML = riddle3.charAt(4);
+	   x6.innerHTML = riddle3.charAt(5);
+	   x7.innerHTML = riddle3.charAt(6);
+	   x8.innerHTML = riddle3.charAt(7); 
+	} else if (randomRiddle == 3) {
+	   var answer = riddle4;
+	   x1.innerHTML = riddle4.charAt(0);
+	   x2.innerHTML = riddle4.charAt(1);
+	   x3.innerHTML = riddle4.charAt(2);
+	   x4.innerHTML = riddle4.charAt(3);
+	   x5.innerHTML = riddle4.charAt(4);
+	   x6.innerHTML = riddle4.charAt(5);
+	   x7.innerHTML = riddle4.charAt(6);
+	   x8.innerHTML = riddle4.charAt(7); 	   
+	} else if (randomRiddle == 4) {  
+	   var answer = riddle5;
+	   x1.innerHTML = riddle5.charAt(0);
+	   x2.innerHTML = riddle5.charAt(1);
+	   x3.innerHTML = riddle5.charAt(2);
+	   x4.innerHTML = riddle5.charAt(3);
+	   x5.innerHTML = riddle5.charAt(4);
+	   x6.innerHTML = riddle5.charAt(5);
+	   x7.innerHTML = riddle5.charAt(6);
+	   x8.innerHTML = riddle5.charAt(7); 
+    } else if (randomRiddle == 5) {
+	   var answer = riddle6;
+	   x1.innerHTML = riddle6.charAt(0);
+	   x2.innerHTML = riddle6.charAt(1);
+	   x3.innerHTML = riddle6.charAt(2);
+	   x4.innerHTML = riddle6.charAt(3);
+	   x5.innerHTML = riddle6.charAt(4);
+	   x6.innerHTML = riddle6.charAt(5);
+	   x7.innerHTML = riddle6.charAt(6);
+	   x8.innerHTML = riddle6.charAt(7); 
+    } else if (randomRiddle == 6) {
+	   var answer = riddle7;
+	   x1.innerHTML = riddle7.charAt(0);
+	   x2.innerHTML = riddle7.charAt(1);
+	   x3.innerHTML = riddle7.charAt(2);
+	   x4.innerHTML = riddle7.charAt(3);
+	   x5.innerHTML = riddle7.charAt(4);
+	   x6.innerHTML = riddle7.charAt(5);
+	   x7.innerHTML = riddle7.charAt(6);
+	   x8.innerHTML = riddle7.charAt(7); 
+    } else if (randomRiddle == 7) {
+	   var answer = riddle8;
+	   x1.innerHTML = riddle8.charAt(0);
+	   x2.innerHTML = riddle8.charAt(1);
+	   x3.innerHTML = riddle8.charAt(2);
+	   x4.innerHTML = riddle8.charAt(3);
+	   x5.innerHTML = riddle8.charAt(4);
+	   x6.innerHTML = riddle8.charAt(5);
+	   x7.innerHTML = riddle8.charAt(6);
+	   x8.innerHTML = riddle8.charAt(7); 
+    } else if (randomRiddle == 8) {
+	   var answer = riddle9;
+	   x1.innerHTML = riddle9.charAt(0);
+	   x2.innerHTML = riddle9.charAt(1);
+	   x3.innerHTML = riddle9.charAt(2);
+	   x4.innerHTML = riddle9.charAt(3);
+	   x5.innerHTML = riddle9.charAt(4);
+	   x6.innerHTML = riddle9.charAt(5);
+	   x7.innerHTML = riddle9.charAt(6);
+	   x8.innerHTML = riddle9.charAt(7); 		   
 	} else {
-	   document.getElementById("firstLe").innerHTML = riddles.riddle4.firstLetter;
-	   document.getElementById("secLe").innerHTML = riddles.riddle4.secondLetter;
-	   document.getElementById("thirdLe").innerHTML = riddles.riddle4.thirdLetter;
-	   document.getElementById("fourthLe").innerHTML = riddles.riddle4.fourthLetter;
-	   document.getElementById("fifthLe").innerHTML = riddles.riddle4.fifthLetter;
-	   document.getElementById("sixthLe").innerHTML = riddles.riddle4.sixthLetter;
-	   document.getElementById("sevLe").innerHTML = riddles.riddle4.seventhLetter;
-	   document.getElementById("eighLe").innerHTML = riddles.riddle4.eightLetter;
+	   var answer = riddle10;
+	   x1.innerHTML = riddle10.charAt(0);
+	   x2.innerHTML = riddle10.charAt(1);
+	   x3.innerHTML = riddle10.charAt(2);
+	   x4.innerHTML = riddle10.charAt(3);
+	   x5.innerHTML = riddle10.charAt(4);
+	   x6.innerHTML = riddle10.charAt(5);
+	   x7.innerHTML = riddle10.charAt(6);
+	   x8.innerHTML = riddle10.charAt(7); 
     };
 	   var numOfTries = 0;
 	   function numOfTriesMaker () {
@@ -138,35 +161,35 @@ function needUserInput() {
 	var czekin = false;
 	if (wybor1 == documEleValue1) {
 	   czekin = true;
-	   document.getElementById("firstLe").style.color='black';
+	   x1.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!"; 
 	 } if (wybor1 == documEleValue2) {
 	   czekin = true;
-	   document.getElementById("secLe").style.color='black';
+	   x2.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue3) {
 	   czekin = true;
-	   document.getElementById("thirdLe").style.color='black';
+	   x3.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue4) {
 	   czekin = true;
-	   document.getElementById("fourthLe").style.color='black';
+	   x4.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue5) {
 	   czekin = true;
-	   document.getElementById("fifthLe").style.color='black';
+	   x5.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue6) {
 	   czekin = true;
-	   document.getElementById("sixthLe").style.color='black';
+	   x6.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue7) {
 	   czekin = true;
-	   document.getElementById("sevLe").style.color='black';
+	   x7.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue8) {
 	   czekin = true;
-	   document.getElementById("eighLe").style.color='black';
+	   x8.style.color='black';
 	   document.getElementById("warn").innerHTML = "Good Choice!";
 	 } 
 	 if (czekin == false) {
@@ -177,6 +200,27 @@ function needUserInput() {
 		 break;
 	     case 2:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec3.png";
+		   if (answer == riddle1) {
+		     hint.innerHTML = "Not a militia person.";
+		    } else if (answer == riddle2) {
+		     hint.innerHTML = "During the night.";		
+			} else if (answer == riddle3) {
+		     hint.innerHTML = "A kind of life, that goes wild.";			
+			} else if (answer == riddle4) {
+		     hint.innerHTML = "Helps you maintaining your arm.";			
+			} else if (answer == riddle5) {
+		     hint.innerHTML = "One of basic mathematic processes.";
+			} else if (answer == riddle6) {
+		     hint.innerHTML = "A friend of hero.";			
+			} else if (answer == riddle7) {			
+		     hint.innerHTML = "Something that Sherlock Holmes always likes to find";
+			} else if (answer == riddle8) {	
+		     hint.innerHTML = "Helps with clean air.";
+			} else if (answer == riddle9) {
+		     hint.innerHTML = "A kind of substance that likes to get the contact with an air";
+			} else {	
+		     hint.innerHTML = "Trying to break free from a restraint.";
+			};
 		 break;
 	     case 3:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec4.png";
@@ -187,9 +231,9 @@ function needUserInput() {
 	     default:
 		   document.getElementById("hangman").src = "hangmanImages/wisielec6.png";
 		   document.getElementById("warn").innerHTML = "You have lost the game!";
+		   document.getElementById("warn").style.color = 'red';
 		}	 
 		
 	 }
 	 
-};
-
+}; 
