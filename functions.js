@@ -196,38 +196,44 @@ function needUserInput() {
 	   document.getElementById("warn").innerHTML = "Wrong choice!"; 	 
 	   switch (numOfTriesMaker()) {
 	     case 1:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec2.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec1a.png";
 		 break;
 	     case 2:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec3.png";
-		   if (answer == riddle1) {
-		     hint.innerHTML = "Not a militia person.";
-		    } else if (answer == riddle2) {
-		     hint.innerHTML = "During the night.";		
-			} else if (answer == riddle3) {
-		     hint.innerHTML = "A kind of life, that goes wild.";			
-			} else if (answer == riddle4) {
-		     hint.innerHTML = "Helps you maintaining your arm.";			
-			} else if (answer == riddle5) {
-		     hint.innerHTML = "One of basic mathematic processes.";
-			} else if (answer == riddle6) {
-		     hint.innerHTML = "A friend of hero.";			
-			} else if (answer == riddle7) {			
-		     hint.innerHTML = "Something that Sherlock Holmes always likes to find";
-			} else if (answer == riddle8) {	
-		     hint.innerHTML = "Helps with clean air.";
-			} else if (answer == riddle9) {
-		     hint.innerHTML = "A kind of substance that likes to get the contact with an air";
-			} else {	
-		     hint.innerHTML = "Trying to break free from a restraint.";
-			};
+	       document.getElementById("hangman").src = "hangmanImages/wisielec2.png";
 		 break;
 	     case 3:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec4.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec2a.png";
 		 break;
 	     case 4:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec5.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec3.png";
+		   if (answer == riddle1) {
+		      hint.innerHTML = "Not a militia person.";
+		    } else if (answer == riddle2) {
+		      hint.innerHTML = "During the night.";		
+			} else if (answer == riddle3) {
+		      hint.innerHTML = "A kind of life, that goes wild.";			
+			} else if (answer == riddle4) {
+		      hint.innerHTML = "Helps you maintaining your arm.";			
+			} else if (answer == riddle5) {
+		      hint.innerHTML = "One of basic mathematic processes.";
+			} else if (answer == riddle6) {
+		      hint.innerHTML = "A friend of hero.";			
+			} else if (answer == riddle7) {			
+		      hint.innerHTML = "Something that Sherlock Holmes always likes to find";
+			} else if (answer == riddle8) {	
+		      hint.innerHTML = "Helps with clean air.";
+			} else if (answer == riddle9) {
+		      hint.innerHTML = "A kind of substance that likes to get the contact with an air";
+			} else {	
+		      hint.innerHTML = "Trying to break free from a restraint.";
+			};		   
 		 break;
+	     case 5:
+	       document.getElementById("hangman").src = "hangmanImages/wisielec4.png";
+		 break;	
+	     case 6:
+	       document.getElementById("hangman").src = "hangmanImages/wisielec5.png";
+		 break;		 
 	     default:
 		   document.getElementById("hangman").src = "hangmanImages/wisielec6.png";
 		   document.getElementById("warn").innerHTML = "You have lost the game!";
