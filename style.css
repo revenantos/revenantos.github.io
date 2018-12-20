@@ -4,7 +4,7 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; 
 	display: inline-block;
 	color: white;
 	width: 17px;
@@ -36,7 +36,7 @@
 	margin-top: 10px;
 	font-size: 20px;
 }
-#subButton:hover {
+#subButton:hover, #refresh:hover {
 	text-shadow: 1px 1px red;
 	cursor: pointer;
 }
