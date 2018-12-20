@@ -29,7 +29,10 @@
 #userInput {
     width: 30px;
     height: 30px;
-    padding-left: 3px;	
+    padding-left: 3px;
+	font-size: 22px;
+	border: 3px inset green;
+	
 }
 #subButton {
 	padding: 10px;
