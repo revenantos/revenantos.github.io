@@ -26,6 +26,10 @@ var riddle7 = "EVIDENCE";
 var riddle8 = "WOODLAND";
 var riddle9 = "VOLATILE";
 var riddle10 = "STRUGGLE";
+var riddle11 = "ABSENCE";
+var riddle12 = "VEHICLE";
+var riddle13 = "ONGOING";
+var riddle14 = "HERSELF";
 
 var x1 = document.getElementById("firstLe");
 var x2 = document.getElementById("secLe");
@@ -36,9 +40,8 @@ var x6 = document.getElementById("sixthLe");
 var x7 = document.getElementById("sevLe");
 var x8 = document.getElementById("eighLe");
 
-var hint = document.getElementById("hint");
     
-	var randomRiddle = Math.floor(Math.random() * 10); 
+	var randomRiddle = Math.floor(Math.random() * 14); 
 	 if (randomRiddle == 0) {
 	   var answer = riddle1;
 	   x1.innerHTML = riddle1.charAt(0);
@@ -128,8 +131,8 @@ var hint = document.getElementById("hint");
 	   x5.innerHTML = riddle9.charAt(4);
 	   x6.innerHTML = riddle9.charAt(5);
 	   x7.innerHTML = riddle9.charAt(6);
-	   x8.innerHTML = riddle9.charAt(7); 		   
-	} else {
+	   x8.innerHTML = riddle9.charAt(7); 
+    } else if (randomRiddle == 9) {
 	   var answer = riddle10;
 	   x1.innerHTML = riddle10.charAt(0);
 	   x2.innerHTML = riddle10.charAt(1);
@@ -139,13 +142,61 @@ var hint = document.getElementById("hint");
 	   x6.innerHTML = riddle10.charAt(5);
 	   x7.innerHTML = riddle10.charAt(6);
 	   x8.innerHTML = riddle10.charAt(7); 
+    } else if (randomRiddle == 10) {
+	   var answer = riddle11;
+	   x1.innerHTML = riddle11.charAt(0);
+	   x2.innerHTML = riddle11.charAt(1);
+	   x3.innerHTML = riddle11.charAt(2);
+	   x4.innerHTML = riddle11.charAt(3);
+	   x5.innerHTML = riddle11.charAt(4);
+	   x6.innerHTML = riddle11.charAt(5);
+	   x7.innerHTML = riddle11.charAt(6);
+	   x8.innerHTML = riddle11.charAt(7); 
+    } else if (randomRiddle == 11) {
+	   var answer = riddle12;
+	   x1.innerHTML = riddle12.charAt(0);
+	   x2.innerHTML = riddle12.charAt(1);
+	   x3.innerHTML = riddle12.charAt(2);
+	   x4.innerHTML = riddle12.charAt(3);
+	   x5.innerHTML = riddle12.charAt(4);
+	   x6.innerHTML = riddle12.charAt(5);
+	   x7.innerHTML = riddle12.charAt(6);
+	   x8.innerHTML = riddle12.charAt(7); 
+    } else if (randomRiddle == 12) {
+	   var answer = riddle13;
+	   x1.innerHTML = riddle13.charAt(0);
+	   x2.innerHTML = riddle13.charAt(1);
+	   x3.innerHTML = riddle13.charAt(2);
+	   x4.innerHTML = riddle13.charAt(3);
+	   x5.innerHTML = riddle13.charAt(4);
+	   x6.innerHTML = riddle13.charAt(5);
+	   x7.innerHTML = riddle13.charAt(6);
+	   x8.innerHTML = riddle13.charAt(7); 	   
+	} else {
+	   var answer = riddle14;
+	   x1.innerHTML = riddle14.charAt(0);
+	   x2.innerHTML = riddle14.charAt(1);
+	   x3.innerHTML = riddle14.charAt(2);
+	   x4.innerHTML = riddle14.charAt(3);
+	   x5.innerHTML = riddle14.charAt(4);
+	   x6.innerHTML = riddle14.charAt(5);
+	   x7.innerHTML = riddle14.charAt(6);
+	   x8.innerHTML = riddle14.charAt(7); 
     };
+	
+	 if (answer.length == 7) {
+		 x8.style.display= 'none';
+	 };
+		
 	   var numOfTries = 0;
 	   function numOfTriesMaker () {
 	   numOfTries++;
 	   return numOfTries;
 	  };
-	
+
+		var win8Letters = [1,1,1,1,1,1,1,1];   
+        var win7Letters = [1,1,1,1,1,1,1]; 
+
 function needUserInput() {	
     var wybor = document.getElementById("userInput").value;
     var wybor1 = wybor.toUpperCase();
@@ -157,41 +208,60 @@ function needUserInput() {
 	var documEleValue6 = document.getElementById("sixthLe").innerHTML;
 	var documEleValue7 = document.getElementById("sevLe").innerHTML;
 	var documEleValue8 = document.getElementById("eighLe").innerHTML;
-	
-	var czekin = false;
+	var warn = document.getElementById("warn");
+	var hint = document.getElementById("hint");
+	var czekin = false;		
+
+		
 	if (wybor1 == documEleValue1) {
 	   czekin = true;
+	   win8Letters[0] = 2;
+	   win7Letters[0] = 2;
 	   x1.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!"; 
+	   warn.innerHTML = "Good Choice!"; 
 	 } if (wybor1 == documEleValue2) {
+	   win8Letters[1] = 2;
+	   win7Letters[1] = 2;
 	   czekin = true;
 	   x2.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue3) {
+	   win8Letters[2] = 2;
+	   win7Letters[2] = 2;
 	   czekin = true;
 	   x3.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue4) {
+	   win8Letters[3] = 2;
+	   win7Letters[3] = 2;
 	   czekin = true;
 	   x4.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue5) {
+	   win8Letters[4] = 2;
+	   win7Letters[4] = 2;
 	   czekin = true;
 	   x5.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue6) {
+	   win8Letters[5] = 2;
+	   win7Letters[5] = 2;
 	   czekin = true;
 	   x6.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue7) {
+	   win8Letters[6] = 2;
+	   win7Letters[6] = 2;
 	   czekin = true;
 	   x7.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
+	   warn.innerHTML = "Good Choice!";
 	 } if (wybor1 == documEleValue8) {
+	   win8Letters[7] = 2;
 	   czekin = true;
 	   x8.style.color='black';
-	   document.getElementById("warn").innerHTML = "Good Choice!";
-	 } 
+	   warn.innerHTML = "Good Choice!";
+	 }
+	 
 	 if (czekin == false) {
 	   document.getElementById("warn").innerHTML = "Wrong choice!"; 	 
 	   switch (numOfTriesMaker()) {
@@ -223,9 +293,17 @@ function needUserInput() {
 			} else if (answer == riddle8) {	
 		      hint.innerHTML = "Helps with clean air.";
 			} else if (answer == riddle9) {
-		      hint.innerHTML = "A kind of substance that likes to get the contact with an air";
-			} else {	
+		      hint.innerHTML = "A kind of substance that likes to get the contact with an air.";
+			} else if (answer == riddle10) {	
 		      hint.innerHTML = "Trying to break free from a restraint.";
+			} else if (answer == riddle11) {
+		      hint.innerHTML = "Lack of something.";
+			} else if (answer == riddle12) {
+		      hint.innerHTML = "A car, a tank or a bike.";
+			} else if (answer == riddle13) {
+		      hint.innerHTML = "E.g an event, that occurs right now, is an ..... event";
+			} else { 
+		      hint.innerHTML = "A word that helps you refer to human female.";			
 			};		   
 		 break;
 	     case 5:
@@ -233,13 +311,36 @@ function needUserInput() {
 		 break;	
 	     case 6:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec5.png";
+		   document.getElementById("gameHangman").style.backgroundImage = 'repeating-linear-gradient(to bottom right, #ddd, #bbb, #999)';
+		   document.getElementById("gameHangman").style.border = '5px outset #555';
 		 break;		 
 	     default:
 		   document.getElementById("hangman").src = "hangmanImages/wisielec6.png";
-		   document.getElementById("warn").innerHTML = "You have lost the game!";
-		   document.getElementById("warn").style.color = 'red';
-		}	 
-		
-	 }
-	 
+		   document.getElementById("userInput").disabled = true;
+		   warn.innerHTML = 'You have lost the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';
+		   warn.style.color = 'red';  
+		}				
+	 };		
+        if (answer.length == 8) { 
+	    console.log('aaaaa', win8Letters);
+        var winConditionIf8Letters = win8Letters.every(function(value) {return value == 2});		
+          if (winConditionIf8Letters) {
+		   warn.style.color = 'blue';
+		   warn.innerHTML = 'CONGRATULATIONS! You have won the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';	
+		   document.getElementById("userInput").disabled = true;		   
+	      };		   
+		};
+
+
+        if (answer.length == 7) {
+	    console.log('aaaaa', win7Letters);
+	    var winConditionIf7Letters = win7Letters.every(function(value) {return value == 2});			
+		  if (winConditionIf7Letters) {
+		   warn.style.color = 'blue';
+		   warn.innerHTML = 'CONGRATULATIONS! You have won the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';	
+		   document.getElementById("userInput").disabled = true;		   
+	      };		   
+		};			
+	  
 }; 
+
