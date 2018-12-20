@@ -322,7 +322,6 @@ function needUserInput() {
 		}				
 	 };		
         if (answer.length == 8) { 
-	    console.log('aaaaa', win8Letters);
         var winConditionIf8Letters = win8Letters.every(function(value) {return value == 2});		
           if (winConditionIf8Letters) {
 		   warn.style.color = 'blue';
@@ -333,7 +332,7 @@ function needUserInput() {
 
 
         if (answer.length == 7) {
-	    console.log('aaaaa', win7Letters);
+	    /* console.log('aaaaa', win7Letters); */
 	    var winConditionIf7Letters = win7Letters.every(function(value) {return value == 2});			
 		  if (winConditionIf7Letters) {
 		   warn.style.color = 'blue';
