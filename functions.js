@@ -150,8 +150,7 @@ var x8 = document.getElementById("eighLe");
 	   x4.innerHTML = riddle11.charAt(3);
 	   x5.innerHTML = riddle11.charAt(4);
 	   x6.innerHTML = riddle11.charAt(5);
-	   x7.innerHTML = riddle11.charAt(6);
-	   x8.innerHTML = riddle11.charAt(7); 
+	   x7.innerHTML = riddle11.charAt(6); 
     } else if (randomRiddle == 11) {
 	   var answer = riddle12;
 	   x1.innerHTML = riddle12.charAt(0);
@@ -160,8 +159,7 @@ var x8 = document.getElementById("eighLe");
 	   x4.innerHTML = riddle12.charAt(3);
 	   x5.innerHTML = riddle12.charAt(4);
 	   x6.innerHTML = riddle12.charAt(5);
-	   x7.innerHTML = riddle12.charAt(6);
-	   x8.innerHTML = riddle12.charAt(7); 
+	   x7.innerHTML = riddle12.charAt(6); 
     } else if (randomRiddle == 12) {
 	   var answer = riddle13;
 	   x1.innerHTML = riddle13.charAt(0);
@@ -170,8 +168,7 @@ var x8 = document.getElementById("eighLe");
 	   x4.innerHTML = riddle13.charAt(3);
 	   x5.innerHTML = riddle13.charAt(4);
 	   x6.innerHTML = riddle13.charAt(5);
-	   x7.innerHTML = riddle13.charAt(6);
-	   x8.innerHTML = riddle13.charAt(7); 	   
+	   x7.innerHTML = riddle13.charAt(6); 	   
 	} else {
 	   var answer = riddle14;
 	   x1.innerHTML = riddle14.charAt(0);
@@ -180,8 +177,7 @@ var x8 = document.getElementById("eighLe");
 	   x4.innerHTML = riddle14.charAt(3);
 	   x5.innerHTML = riddle14.charAt(4);
 	   x6.innerHTML = riddle14.charAt(5);
-	   x7.innerHTML = riddle14.charAt(6);
-	   x8.innerHTML = riddle14.charAt(7); 
+	   x7.innerHTML = riddle14.charAt(6); 
     };
 	
 	 if (answer.length == 7) {
@@ -212,7 +208,11 @@ function needUserInput() {
 	var hint = document.getElementById("hint");
 	var czekin = false;		
 
-		
+/*	
+	if (typeof wybor1 != typeof "string") {
+		alert("Wrong input type!");
+	}
+*/	
 	if (wybor1 == documEleValue1) {
 	   czekin = true;
 	   win8Letters[0] = 2;
@@ -255,7 +255,7 @@ function needUserInput() {
 	   czekin = true;
 	   x7.style.color='black';
 	   warn.innerHTML = "Good Choice!";
-	 } if (wybor1 == documEleValue8) {
+	 } if (wybor1 == documEleValue8 && answer.length == 8) {
 	   win8Letters[7] = 2;
 	   czekin = true;
 	   x8.style.color='black';
@@ -266,16 +266,16 @@ function needUserInput() {
 	   document.getElementById("warn").innerHTML = "Wrong choice!"; 	 
 	   switch (numOfTriesMaker()) {
 	     case 1:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec1a.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec1.jpg";
 		 break;
 	     case 2:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec2.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec2.jpg";
 		 break;
 	     case 3:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec2a.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec3.jpg";
 		 break;
 	     case 4:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec3.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec4.jpg";
 		   if (answer == riddle1) {
 		      hint.innerHTML = "Not a militia person.";
 		    } else if (answer == riddle2) {
@@ -307,15 +307,15 @@ function needUserInput() {
 			};		   
 		 break;
 	     case 5:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec4.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec5.jpg";
 		 break;	
 	     case 6:
-	       document.getElementById("hangman").src = "hangmanImages/wisielec5.png";
+	       document.getElementById("hangman").src = "hangmanImages/wisielec6.jpg";
 		   document.getElementById("gameHangman").style.backgroundImage = 'repeating-linear-gradient(to bottom right, #ddd, #bbb, #999)';
 		   document.getElementById("gameHangman").style.border = '5px outset #555';
 		 break;		 
 	     default:
-		   document.getElementById("hangman").src = "hangmanImages/wisielec6.png";
+		   document.getElementById("hangman").src = "hangmanImages/wisielec7.jpg";
 		   document.getElementById("userInput").disabled = true;
 		   warn.innerHTML = 'You have lost the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';
 		   warn.style.color = 'red';  
