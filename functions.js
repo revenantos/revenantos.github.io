@@ -204,6 +204,8 @@ function needUserInput() {
 	var documEleValue6 = document.getElementById("sixthLe").innerHTML;
 	var documEleValue7 = document.getElementById("sevLe").innerHTML;
 	var documEleValue8 = document.getElementById("eighLe").innerHTML;
+	var subButton = document.getElementById("subButton");
+	var refresh = document.getElementById("refresh");
 	var warn = document.getElementById("warn");
 	var hint = document.getElementById("hint");
 	var czekin = false;		
@@ -318,7 +320,10 @@ function needUserInput() {
 		   document.getElementById("hangman").src = "hangmanImages/wisielec7.jpg";
 		   document.getElementById("userInput").disabled = true;
 		   warn.innerHTML = 'You have lost the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';
-		   warn.style.color = 'red';  
+		   warn.style.color = 'red'; 
+           subButton.style.display ='none'; 
+		   refresh.style.display ='inline-block';
+		   
 		}				
 	 };		
         if (answer.length == 8) { 
@@ -326,7 +331,9 @@ function needUserInput() {
           if (winConditionIf8Letters) {
 		   warn.style.color = 'blue';
 		   warn.innerHTML = 'CONGRATULATIONS! You have won the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';	
-		   document.getElementById("userInput").disabled = true;		   
+		   document.getElementById("userInput").disabled = true;	
+           subButton.style.display ='none';
+		   refresh.style.display ='inline-block';			   
 	      };		   
 		};
 
@@ -336,8 +343,10 @@ function needUserInput() {
 	    var winConditionIf7Letters = win7Letters.every(function(value) {return value == 2});			
 		  if (winConditionIf7Letters) {
 		   warn.style.color = 'blue';
-		   warn.innerHTML = 'CONGRATULATIONS! You have won the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';	
-		   document.getElementById("userInput").disabled = true;		   
+		   warn.innerHTML = 'CONGRATULATIONS! You have won the game!';	
+		   document.getElementById("userInput").disabled = true;
+           subButton.style.display ='none';
+		   refresh.style.display ='inline-block';	   
 	      };		   
 		};			
 	  
