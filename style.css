@@ -31,10 +31,14 @@
     height: 30px;
     padding-left: 3px;
 	font-size: 22px;
-	border: 2px inset red;
-	
+	border: 2px inset red;	
 }
-#subButton {
+
+#refresh {
+	display: none;
+}
+
+#subButton, #refresh {
 	padding: 10px;
 	margin-top: 10px;
 	font-size: 20px;
