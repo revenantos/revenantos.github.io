@@ -39,18 +39,19 @@
 	 <img id ="hangman" src="hangmanImages/wisielec0.jpg" alt="the hangman" style="width:200px;height:350px;">
      <p class ="opis">GUESS THE CORRECT PASSWORD:</p>
      <div id ="letters">
-      <p id="firstLe"></p>
-	  <p id="secLe"></p>
+      <p id ="firstLe"></p>
+	  <p id ="secLe"></p>
 	  <p id ="thirdLe"></p>
-  	  <p id="fourthLe"></p>
-	  <p id="fifthLe"></p>
-	  <p id="sixthLe"></p>
-	  <p id="sevLe"></p>
-	  <p id="eighLe"></p>
+  	  <p id ="fourthLe"></p>
+	  <p id ="fifthLe"></p>
+	  <p id ="sixthLe"></p>
+	  <p id ="sevLe"></p>
+	  <p id ="eighLe"></p>
 	 </div>
       <p id="warn">Insert a letter using keyboard, then accept it with the button below to make a guess!</p>
 	  <p id="hint">Hint: The hint displays here should you fail few times.</p>
     <input class ="opis" id ="userInput" type="text" maxlength ="1" autofocus></input><br />
+	<button id ="refresh" class ="opis" value="Refresh Page" onclick="window.location.reload()" type="button">Try again!</button>
 	<button class ="opis" id="subButton" type="button" onclick="needUserInput()">Try your luck!</button>
 	</div>
    </div>
