@@ -29,7 +29,7 @@ var riddle10 = "STRUGGLE";
 var riddle11 = "ABSENCE";
 var riddle12 = "VEHICLE";
 var riddle13 = "ONGOING";
-var riddle14 = "HERSELF";
+var riddle14 = "COMMAND";
 
 var x1 = document.getElementById("firstLe");
 var x2 = document.getElementById("secLe");
@@ -220,52 +220,61 @@ function needUserInput() {
 	   win8Letters[0] = 2;
 	   win7Letters[0] = 2;
 	   x1.style.color='black';
-	   warn.innerHTML = "Good Choice!"; 
+	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue2) {
 	   win8Letters[1] = 2;
 	   win7Letters[1] = 2;
 	   czekin = true;
 	   x2.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue3) {
 	   win8Letters[2] = 2;
 	   win7Letters[2] = 2;
 	   czekin = true;
 	   x3.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue4) {
 	   win8Letters[3] = 2;
 	   win7Letters[3] = 2;
 	   czekin = true;
 	   x4.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue5) {
 	   win8Letters[4] = 2;
 	   win7Letters[4] = 2;
 	   czekin = true;
 	   x5.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue6) {
 	   win8Letters[5] = 2;
 	   win7Letters[5] = 2;
 	   czekin = true;
 	   x6.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue7) {
 	   win8Letters[6] = 2;
 	   win7Letters[6] = 2;
 	   czekin = true;
 	   x7.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 } if (wybor1 == documEleValue8 && answer.length == 8) {
 	   win8Letters[7] = 2;
 	   czekin = true;
 	   x8.style.color='black';
 	   warn.innerHTML = "Good Choice!";
+       warn.style.color ='blue';	   
 	 }
 	 
 	 if (czekin == false) {
-	   document.getElementById("warn").innerHTML = "Wrong choice!"; 	 
+	   document.getElementById("warn").innerHTML = "Wrong choice!"; 
+       warn.style.color ='red';	   
 	   switch (numOfTriesMaker()) {
 	     case 1:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec1.jpg";
@@ -279,7 +288,7 @@ function needUserInput() {
 	     case 4:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec4.jpg";
 		   if (answer == riddle1) {
-		      hint.innerHTML = "Not a militia person.";
+		      hint.innerHTML = "Not a military person.";
 		    } else if (answer == riddle2) {
 		      hint.innerHTML = "During the night.";		
 			} else if (answer == riddle3) {
@@ -293,9 +302,9 @@ function needUserInput() {
 			} else if (answer == riddle7) {			
 		      hint.innerHTML = "Something that Sherlock Holmes always likes to find";
 			} else if (answer == riddle8) {	
-		      hint.innerHTML = "Helps with clean air.";
+		      hint.innerHTML = "Provides us with clean air.";
 			} else if (answer == riddle9) {
-		      hint.innerHTML = "A kind of substance that likes to get the contact with an air.";
+		      hint.innerHTML = "A kind of substance that likes to be in touch with an air.";
 			} else if (answer == riddle10) {	
 		      hint.innerHTML = "Trying to break free from a restraint.";
 			} else if (answer == riddle11) {
@@ -305,18 +314,19 @@ function needUserInput() {
 			} else if (answer == riddle13) {
 		      hint.innerHTML = "E.g an event, that occurs right now, is an ..... event";
 			} else { 
-		      hint.innerHTML = "A word that helps you refer to human female.";			
-			};		   
+		      hint.innerHTML = "To give orders to someone.";			
+			};
+			
 		 break;
 	     case 5:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec5.jpg";
 		 break;	
 	     case 6:
 	       document.getElementById("hangman").src = "hangmanImages/wisielec6.jpg";
-		   document.getElementById("gameHangman").style.backgroundImage = 'repeating-linear-gradient(to bottom right, #ddd, #bbb, #999)';
-		   document.getElementById("gameHangman").style.border = '5px outset #555';
 		 break;		 
 	     default:
+		   document.getElementById("gameHangman").style.backgroundImage = 'linear-gradient(to bottom right, #ddd, #bbb, #999)';
+		   document.getElementById("gameHangman").style.border = '5px outset #555';		 
 		   document.getElementById("hangman").src = "hangmanImages/wisielec7.jpg";
 		   document.getElementById("userInput").disabled = true;
 		   warn.innerHTML = 'You have lost the game! <button value="Refresh Page" id="refresh" onclick="window.location.reload()">Try again!</button>';
@@ -351,4 +361,3 @@ function needUserInput() {
 		};			
 	  
 }; 
-
