@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
 </head>
 <body id="bodybody">
   <div id="navbar">
@@ -33,9 +34,12 @@
        </div>
   </div>
   
-  <div class="gridowiec">
-    <div id ="gameHangman">
-      <div id="innerGame">
+  <div class ="gridowiec">
+	<div id ="gameHangman">
+	     <h1 class ="title">The Hangman</h1>
+	     <p class ="opis" id="opisgry">If you've never heard of the Hangman game then you should still find it really simple - the player has to guess
+	     all the letters from the password given. Each failed attempt makes the player one step closer to the tragic fate. 
+	     Guess the whole password <strong>before</strong> it happens to win the game!</p>   
 	 <img id ="hangman" src="hangmanImages/wisielec0.jpg" alt="the hangman" style="width:200px;height:350px;">
      <p class ="opis">GUESS THE CORRECT PASSWORD:</p>
      <div id ="letters">
@@ -48,40 +52,22 @@
 	  <p id ="sevLe"></p>
 	  <p id ="eighLe"></p>
 	 </div>
-      <p id="warn">Insert a letter using keyboard, then accept it with the button below to make a guess!</p>
-	  <p id="hint">Hint: The hint displays here should you fail few times.</p>
-    <input class ="opis" id ="userInput" type="text" maxlength ="1" autofocus></input><br />
-	<button id ="refresh" class ="opis" value="Refresh Page" onclick="window.location.reload()" type="button">Try again!</button>
-	<button class ="opis" id="subButton" type="button" onclick="needUserInput()">Try your luck!</button>
-	</div>
+      <p id="warn" class ="opis">Insert a letter using keyboard, then accept it with the button below!</p>
+	  <p id="hint" class= "opis">Hint: The hint displays here should you fail few times.</p>
+    <input id ="userInput" type="text" maxlength ="1" autofocus></input><br />
+	<button id ="refresh" type="button" value="Refresh Page" onclick="window.location.reload()" >Try again!</button>
+	<button id="subButton" type="button" onclick="needUserInput()">Try your luck!</button>
    </div>
 
 <!-- <p>Test:</p><p id="test"></p>
 <br /><br />
 <p>Error:</p><p id="error"></p> -->
   
-  
-  <div class="wstep a wszy">
-    <h1 id="p1">Wstęp</h1>
-    <p>Niniejsza stronka została zrobiona jedynie w celach treningowych. 
-    ze względu na brak pomysłu na treść, zostanie ona wymyślona na poczekaniu. 
-    Wymyślony w ten sposób wywód będzie miał za zadanie przedstawienie dwóch 
-    elementów biorących udział w tworzeniu stron internetowych: HTML i CSS.
-    poniżej zawarte zostaną przykłady tekstu: jeden zawierający samo HTML,
-    oraz drugi, mający za zadanie pokazać jedynie niewielką część możliwości CSS, 
-    które posłuży do stylizowania elementów HTML. W założeniu strona widoczna na 
-    ekranie komputera bądź laptopa powinna pokazać element "Wstęp" w jednej komórce, 
-    następnie elementy "Przykład samego HTML" oraz "Przykład HTML+CSS, a pod nimi
-    ostatni element "Zakończenie". Strona otwarta na ekranie telefonu powinna wyświetlać
-    wszystkie 3 elementy po kolei. Pasek nawigacyjny znajdujący się u góry strony powinien
-    poruszać się wraz z przewijaniem tekstu, co prawdopodobnie będzie widoczne jedynie na telefonie.</p>
-  </div>
+
   <div class="przyk1 b wszy">
     <h1 id="p2">Przykład samego HTML</h1>
-	<h2>Przykład tekstu pisanego w samym HTML Obejmuje on również oba napisane nagłówki.</h2>
-	<p>Tekst pozostawiony w samym HTML jest nacechowany szeregiem ustawień domyślnych:
-	jest przesunięty w lewo, ma określoną czcionkę zależną od użytego nagłówku itp.
-	jak widać na obecnym przykładzie nie jest to zbyt atrakcyjna forma tekstu.</p>
+	<h2>The HTML example alone</h2>
+	<p>The text with html only </p>
   </div>
   
   <div class="przyk2 a wszy">
