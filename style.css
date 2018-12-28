@@ -1,17 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+@-webkit-keyframes hangman {
+	from {color: rgba(184, 0, 0, 0);}
+	to {color: rgba(184, 0, 0, 1);}
+}
+/*
+@-webkit-keyframes gameHang {
+	0% {background-image: linear-gradient(to bottom right, #d4fcfe, #84fcfe, #84d5f6);}
+	50% {background-image: linear-gradient(to bottom right, #84fcfe, #84d5f6, #d4fcfe);}
+	100% {}
+}
+*/
+
+.title {
+	font-family: 'Creepster';
+	letter-spacing: 2px;
+	color: #b80000;
+	-webkit-animation-name: hangman;
+	-webkit-animation-duration: 2s;
+	animation-name: hangman;
+	animation-duration: 10s;
+}
+
+.opis {
+    margin: 15px 15px;	
+	font-size: 18px;
+    font-family: 'Helvetica', serif;
+}
+
+
+
 #firstLe, #secLe, #thirdLe, #fourthLe, #fifthLe, #sixthLe, #sevLe, #eighLe {
-	-webkit-touch-callout: none;
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; 
 	display: inline-block;
+	box-sizing: content-box;
 	color: white;
 	width: 17px;
-	padding: 3px;
+	padding: 5px;
 	margin-left: 3px;
 	text-align: center;
-	letter-spacing: 5px;
 	border: 2px solid green;
 	background-color: white;
 	
@@ -19,17 +53,27 @@
 
 #gameHangman {
     grid-area: gameHangman;
+	position: relative;
+	background-image: linear-gradient(to bottom right, #84d5f6, #d4fcfe, #84fcfe);
     width: 60%;
 	margin-left: 20%;
-	background-image: repeating-linear-gradient(to bottom right, #d4fcfe, #84fcfe, #84d5f6);
+	margin-bottom: 20px;
 	border: 5px outset lightblue;
 	border-radius: 25px;
+	text-align: center;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-name: gameHang;
+	animation-duration: 10s;
+	animation-name: gameHang;
+	animation-iteration-count: infinite;
 }
 
 #userInput {
+	box-sizing: content-box;
     width: 30px;
-    height: 30px;
-    padding-left: 3px;
+    height: 40px;
+    padding-left: 17px;
+	margin-top: 30px;
 	font-size: 22px;
 	border: 2px inset red;	
 }
@@ -40,9 +84,10 @@
 
 #subButton, #refresh {
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: 15px;
 	font-size: 20px;
 }
+
 #subButton:hover, #refresh:hover {
 	text-shadow: 1px 1px red;
 	cursor: pointer;
@@ -54,9 +99,6 @@
 	margin-top: 20px;
 }
 
-#innerGame {
-	text-align: center;
-}
 
 body {
 	background: url("https://images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260") no-repeat fixed center;
@@ -66,6 +108,7 @@ body {
 
 
 #navbar {
+	z-index: 1;
 	margin: 0;
 	background-color: #000;
 	color: white;
@@ -148,10 +191,10 @@ li:hover, .av:hover {
 .gridowiec {
 	background-color: lightgray;
 	display: grid;
-	grid-template-rows: 2fr 1fr 2fr 1fr;
+	grid-template-rows: 3fr 2fr 1fr;
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'gameHangman gameHangman'
-	                     'wstep wstep'
+	grid-template-areas:	             
+						 'gameHangman gameHangman'
 						 'przyk1 przyk2'
 						 'zakonczenie zakonczenie';
 	width: 1000px;
@@ -179,9 +222,6 @@ li:hover, .av:hover {
     background-color: white;
 }	
 
-.wstep {
-	grid-area: wstep;
-}
 
 .przyk1 {
 	grid-area: przyk1;
