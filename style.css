@@ -33,12 +33,12 @@
 
 
 #firstLe, #secLe, #thirdLe, #fourthLe, #fifthLe, #sixthLe, #sevLe, #eighLe {
-    -webkit-touch-callout: none;
+	/*-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none; */
 	display: inline-block;
 	box-sizing: content-box;
 	color: white;
@@ -86,11 +86,23 @@
 	padding: 10px;
 	margin-top: 15px;
 	font-size: 20px;
+	color: white;
+	background-color: #60a2de;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 8px #888;
 }
 
 #subButton:hover, #refresh:hover {
 	text-shadow: 1px 1px red;
 	cursor: pointer;
+    background-color: #437b94;
+}
+
+#subButton:active, #refresh:active {
+	box-shadow: 0 4px #555;
+	background-color: #437b94;
+	transform: matrix(1, 0, 0, 1, 0, 4);
 }
 
 #hangman {
@@ -297,11 +309,23 @@ strong:hover {
 }
 
 @media only screen and (max-width: 300px) {
- .gridowiec {
-	 display: flexbox;
+
+#navbar {
+	position: static;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}    
+
+.gridowiec {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
  }
+ /*
  .przyk1, .przyk2, .przyk3, .zakonczenie {
-	 float: left;
-	 width: 100%;
-}
+	float: left;
+	width: 100%;
+} */
 }
