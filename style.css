@@ -208,7 +208,7 @@ li:hover, .av:hover {
 						 'gameHangman gameHangman'
 						 'przyk1 przyk2'
 						 'zakonczenie zakonczenie';
-	width: 1000px;
+	width: 55%;
 	height: 2000px;
 	padding-top: 3.5vw;
 	margin: 0 0 20% 20%;
@@ -306,19 +306,16 @@ strong:hover {
 	cursor: pointer;
 }
 
-@media only screen and (max-width: 300px) {
+@media screen and (max-width: 300px) {
 
 #navbar {
 	position: static;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	width: 100%;
 }  
 
 #navbar ul li {
     display: block;
     width: 100%;
+	float: left;
 }	
 
 .av {
@@ -327,7 +324,6 @@ strong:hover {
 
 .gridowiec {
 	display: grid;
-	width: 100%;
 	margin: 0;
 	grid-template-rows: 3fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr;
@@ -336,6 +332,10 @@ strong:hover {
 						 'przyk1'
 						 'przyk2'
 						 'zakonczenie';
+ }
+ 
+ #gameHangman, .przyk1, .przyk2, .zakonczenie {
+	 width: 100%;
  }
  
  #gameHangman {
