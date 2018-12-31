@@ -310,17 +310,18 @@ strong:hover {
 
 #navbar {
 	position: static;
+	background-color: #000;
 }  
 
-#navbar ul li, #buttonDark, #buttonLight {
+#navbar ul li, #buttonLight {
     display: block;
     width: 100%;
 	float: left;
-}	
-
-#navbar ul li {
-	background-color: black;
 }
+
+#buttonDark {
+    display: none;
+}	
 
 .av {
 	width: 50%;
@@ -329,6 +330,7 @@ strong:hover {
 .gridowiec {
 	display: grid;
 	width: 100%;
+	margin: 0;
 	grid-template-rows: 3fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr;
 	grid-template-areas:	             
