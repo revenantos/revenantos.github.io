@@ -20,6 +20,8 @@ window.onload = function () {
 	document.getElementById("userInput").focus();
 };
 
+window.onload = scrollTo(0, 0);
+
 /*
 document.getElementById("userInput").addEventListener("load", function () {
 document.getElementById("userInput").autofocus =true;
