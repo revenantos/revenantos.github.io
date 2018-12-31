@@ -16,6 +16,14 @@ function buttonDark() {
 	document.getElementById("buttonDark").style.display='none';
 }
 
+window.onload = function () {
+	document.getElementById("userInput").focus();
+};
+
+/*
+document.getElementById("userInput").addEventListener("load", function () {
+document.getElementById("userInput").autofocus =true;
+}); */
 var riddle1 = "CIVILIAN";
 var riddle2 = "MIDNIGHT";
 var riddle3 = "WILDLIFE";
