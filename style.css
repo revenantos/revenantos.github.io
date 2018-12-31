@@ -343,6 +343,10 @@ strong:hover {
 						 'zakonczenie';
  }
  
+ #gameHangman, .przyk1, .przyk2, .zakonczenie, #innerGame {
+	 width: 100%;
+ }
+ 
  #gameHangman {
 	grid-area: gameHangman; 
 	margin-left: 0;
@@ -360,10 +364,4 @@ strong:hover {
 .zakonczenie {
 	grid-area: zakonczenie;
 }
- 
- /*
- .przyk1, .przyk2, .przyk3, .zakonczenie {
-	float: left;
-	width: 100%;
-} */
 }
