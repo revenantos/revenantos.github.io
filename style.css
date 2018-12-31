@@ -326,8 +326,10 @@ strong:hover {
 
 .av {
 	width: 50%;
-	position: absolute;
-	right: 50%;
+}
+
+#bazinga {
+	left: 50%;
 }
 
 .gridowiec {
