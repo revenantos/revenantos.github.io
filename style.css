@@ -312,11 +312,15 @@ strong:hover {
 	position: static;
 }  
 
-#navbar ul li {
+#navbar ul li, #buttonDark, #buttonLight {
     display: block;
     width: 100%;
 	float: left;
 }	
+
+#navbar ul li {
+	background-color: black;
+}
 
 .av {
 	width: 50%;
@@ -325,7 +329,6 @@ strong:hover {
 .gridowiec {
 	display: grid;
 	width: 100%;
-	margin: 0;
 	grid-template-rows: 3fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr;
 	grid-template-areas:	             
@@ -335,12 +338,13 @@ strong:hover {
 						 'zakonczenie';
  }
  
- #gameHangman, .przyk1, .przyk2, .zakonczenie {
+ #gameHangman, .przyk1, .przyk2, .zakonczenie, #innerGame {
 	 width: 100%;
  }
  
  #gameHangman {
 	grid-area: gameHangman; 
+	margin-left: 0;
  }
  
  .przyk1 {
