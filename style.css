@@ -8,6 +8,38 @@ body {
 	margin: 0;
 }	
 
+#popUpWindow {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	height: 150px;
+	font-size: 23px;
+	background: gray linear-gradient(to right, #ddd, #eee) no-repeat;
+	border-top: 2px solid darkgray;
+}
+
+#popUpWindow p {
+	margin: 50px 20% 0 20%;
+	
+}
+
+#popUpWindow #closeWindow {
+	border: 1px solid red;
+	position: absolute;
+	top: 5px;
+	right: 15%;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#popUpWindow #closeWindow:hover {
+	text-shadow: 1px 1px 2px yellow;
+	font-size: 40px;
+}
+	
+
 @-webkit-keyframes hangman {
 	from {color: rgba(184, 0, 0, 0);}
 	to {color: rgba(184, 0, 0, 1);}
@@ -19,6 +51,20 @@ body {
 	100% {}
 }
 */
+
+#localSt {
+	font-size: 20px;
+	font-family: monospace;
+}
+
+#playerNickname {
+	font-weight: 500; 	
+}
+
+#playerNickname:hover {
+	cursor: pointer;
+	color: red;
+}
 
 .title {
 	font-family: 'Creepster';
@@ -309,6 +355,10 @@ strong:hover {
 }
 
 @media screen and (max-width: 768px) {
+	
+#popUpWindow p {
+	margin: 30px 20px;	
+}
 
 #navbar {
 	position: static;
