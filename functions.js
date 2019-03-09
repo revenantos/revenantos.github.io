@@ -199,10 +199,23 @@ var x8 = document.getElementById("eighLe");
     var win7Letters = [1,1,1,1,1,1,1]; 
 
 
-
-function needUserInput() {	
+    
+	var usIn = document.querySelector('#userInput');
+	var subButton = document.getElementById("subButton");
+	
+	usIn.addEventListener('keydown', function(event) {
+		if (event.key === 'Enter' || event.keyCode === 13 || event.which === 13) {
+			needUserInput();			
+		} else {
+			return false;
+		}
+	});
+	subButton.addEventListener('click', needUserInput);
+	
+  
+	function needUserInput() {	 
     var wybor = document.getElementById("userInput").value;
-    var wybor1 = wybor.toUpperCase();
+    var wybor1 = wybor.toUpperCase();	
 	var documEleValue1 = document.getElementById("firstLe").textContent;
 	var documEleValue2 = document.getElementById("secLe").textContent;
 	var documEleValue3 = document.getElementById("thirdLe").textContent;
@@ -211,17 +224,16 @@ function needUserInput() {
 	var documEleValue6 = document.getElementById("sixthLe").textContent;
 	var documEleValue7 = document.getElementById("sevLe").textContent;
 	var documEleValue8 = document.getElementById("eighLe").textContent;
-	var subButton = document.getElementById("subButton");
 	var refresh = document.getElementById("refresh");
 	var warn = document.getElementById("warn");
 	var hint = document.getElementById("hint");
 	var czekin = false;		
-	
-/*	
-	if (typeof wybor1 != typeof "string") {
-		alert("Wrong input type!");
-	}
-*/	
+
+	if (!isNaN(wybor) || wybor === '') {
+      alert('Please enter valid A-Z english character!');
+	  return false;
+	}	  
+
 	if (wybor1 == documEleValue1) {
 	   czekin = true;
 	   win8Letters[0] = 2;
@@ -367,11 +379,11 @@ function needUserInput() {
 		   refresh.style.display ='inline-block';
 		   winCounter();
 	      }		   
-		}			
-	  userInput.value = '';
-	  userInput.focus();
+		}		
+	  usIn.value = '';
+	  usIn.focus();
 	  console.log(win7Letters, win8Letters, czekin);
-}; 
+	}	  
 
 
 var winPoints = document.getElementById("playerScoreWin");
